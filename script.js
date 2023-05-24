@@ -32,7 +32,7 @@ mensaje.addEventListener("input", function() {
 });
 
 function removeSpecialCharacters(text) {
-    return text.replace(/[^\w\s]/gi, "");
+    return text.replace(/[^a-zA-Z\s]/g, "");
 }
 
 
@@ -84,8 +84,8 @@ function encriptar(stringEncriptada){
 // Función para el botón desencriptar
 
 function btnDesencriptar(){
-    const textoEncriptado = desencriptar(textArea.value)
-    mensaje.value = textoEncriptado
+    const textoDesencriptado = desencriptar(textArea.value)
+    mensaje.value = textoDesencriptado
     textArea.value = "";
 }
 
@@ -94,14 +94,14 @@ function btnDesencriptar(){
 
 function desencriptar(stringDesencriptada){
     let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
-    stringDesencriptada = stringDesencriptada.toLowerCase()
+    stringDesencriptada = stringDesencriptada.toLowerCase();
 
     for(let i = 0; i < matrizCodigo.length; i++){
         if(stringDesencriptada.includes(matrizCodigo[i][1])){
             stringDesencriptada = stringDesencriptada.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0])
         }
     }
-    return stringDesencriptada
+    return stringDesencriptada;
 }
 
 // Función para copiar el texto al portapapeles
