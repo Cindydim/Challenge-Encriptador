@@ -235,14 +235,14 @@ footer {
     #btn-copiar{
         width: 70%;
         font-size: 1rem;
-        margin-top: 24rem;
+        margin-top: 14rem;
         margin-left: 3.5rem;
         display: none;
     }
 
     footer{
         padding: 1rem;
-        margin-top: 170px;
+        margin-top: 370px;
         font-size: 12px;
         width: 100%;
     }

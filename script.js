@@ -5,6 +5,37 @@ const noData = document.getElementById("mensaje-no-data");
 const ingresarTexto = document.getElementById("mensaje-ingresar-texto");
 let botonCopiar = document.querySelector("#btn-copiar")
 
+
+textArea.addEventListener("input", function() {
+    const sanitizedText = removeAccents(textArea.value);
+    textArea.value = sanitizedText;
+});
+
+mensaje.addEventListener("input", function() {
+    const sanitizedText = removeAccents(mensaje.value);
+    mensaje.value = sanitizedText;
+});
+
+function removeAccents(text) {
+    return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+
+textArea.addEventListener("input", function() {
+    const sanitizedText = removeSpecialCharacters(textArea.value);
+    textArea.value = sanitizedText;
+});
+
+mensaje.addEventListener("input", function() {
+    const sanitizedText = removeSpecialCharacters(mensaje.value);
+    mensaje.value = sanitizedText;
+});
+
+function removeSpecialCharacters(text) {
+    return text.replace(/[^\w\s]/gi, "");
+}
+
+
 function mostrarBoton(){
     botonCopiar.style.display = "flex"
 }
