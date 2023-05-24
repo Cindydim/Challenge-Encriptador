@@ -1,0 +1,253 @@
+* {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 150%;
+}
+
+body {
+    background-color: rgba(238, 240, 241, 0.92);
+}
+
+header {
+    background-color: white;
+    padding: 0.5rem;
+}
+
+.caja {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.titulo-principal {
+    display: inline-block;
+    vertical-align: middle;
+    color: rgb(216 218 219 / 92%);
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.4rem;
+    -webkit-text-stroke-width: medium;
+    -webkit-text-stroke-color: #4bb1e3;
+}
+
+#logo {
+    width: 5%;
+    vertical-align: middle;
+}
+
+
+main {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+textarea {
+    border: none;
+    width: 100%;
+    margin: 3rem 0 0.5rem 0;
+    color: #0a3871;
+    text-transform: lowercase;
+    justify-content: center;
+}
+
+::placeholder { color: #0a3871; }
+    .textarea:focus {
+        outline: none;
+    }
+
+.advertencia {
+    color: #495057;
+    font-size: 1rem;
+}
+
+#signo-exclamacion {
+    width: 1rem;
+    vertical-align: middle;
+    margin-bottom: 1px;
+}
+
+.botones {
+    display: flex;
+}
+
+.btn-encriptar {
+    background:#3593c1;
+    border: 1px solid #4bb1e3;
+    border-radius: 24px;
+    color: #eaf0f5;
+    cursor: pointer;
+    height: 5rem;
+    width: 25rem;
+}
+
+.btn-desencriptar {
+    background:#0a3871;
+    border: 1px solid #4bb1e3;
+    border-radius: 24px;
+    color:#eaf0f5;
+    cursor: pointer;
+    height: 5rem;
+    margin-left: 3rem;
+    width: 25rem;
+}
+
+#mensaje{
+    width: 80%;
+    height: 100%;
+    background: white;
+    background-image: url(img/nodata.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    border-radius: 24px;
+    color: #3593c1;
+    padding: 2rem;
+}
+
+
+#mensaje:focus {
+    outline: none;
+}
+
+.mensaje-encriptado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    font-family: "Inter";
+    text-align: center;
+    top: 28rem;
+    gap: 2rem;
+}
+
+#mensaje-no-data {
+    width: 70%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    justify-content: center;
+    margin-right: 70px;
+}
+
+#mensaje-ingresar-texto {
+    width: 80%;
+    font-size: 1rem;
+    margin-right: 4.5rem;
+}
+
+
+#btn-copiar {
+    border: 1px solid #0a3871;
+    border-radius: 24px;
+    background-color: #FFFFFF;
+    color: #0a3871;
+    cursor: pointer;
+    height: 4rem;
+    width: 18rem;
+    position: absolute;
+    top: 84%;
+    margin-left: 1rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    background-color:#3593c1;
+    margin-top: 16rem;
+    padding: 2rem;
+}
+
+.copyright {
+    color: hsl(0, 0%, 100%);
+    font-size: 1.3rem;
+    margin:2rem;
+}
+
+@media screen and (max-width: 480px){
+    main{
+        display: block;
+    }
+
+    .titulo-principal{
+        font-size: 100%;
+        padding: 1rem 0;
+    }
+
+    #logo{
+        width: 6%;
+    }
+
+    textarea{
+        width: 100%;
+    }
+
+    .textarea{
+        background-color: white;
+        margin-top: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #signo-exclamacion{
+        width: 1rem;
+        margin-left: 3px;
+    }
+
+    .advertencia{
+        font-size: 0.6rem;
+    }
+
+    .btn-encriptar, .btn-desencriptar{
+        width: 50%;
+        font-size: 1.4rem;
+    }
+
+    #mensaje{
+        background-image: none;
+        background-color: white;
+        margin-bottom: auto;
+    }
+
+    .mensaje-encriptado{
+        width: auto;
+        position: static;
+        margin-top: -20rem;
+        text-align: center;
+    }
+
+    #mensaje-no-data{
+        width: 80%;
+        margin-left: 4rem;
+    }
+
+    #mensaje-ingresar-texto{
+        width: 70%;
+        margin-left: 4rem;
+    }
+
+    #btn-copiar{
+        width: 70%;
+        font-size: 1rem;
+        margin-top: 24rem;
+        margin-left: 3.5rem;
+        display: none;
+    }
+
+    footer{
+        padding: 1rem;
+        margin-top: 170px;
+        font-size: 12px;
+        width: 100%;
+    }
+
+    header, .caja, main{
+        width: auto;
+    }
+}
